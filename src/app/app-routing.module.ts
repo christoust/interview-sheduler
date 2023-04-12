@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { InterviewFormComponent } from './interview-form/interview-form.component';
+// import { InterviewListComponent } from './interview-list/interview-list.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'interview-form', pathMatch: 'full' },
+  { path: 'interview-form', component: InterviewFormComponent }
+  // { path: 'interview-list', component: InterviewListComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
